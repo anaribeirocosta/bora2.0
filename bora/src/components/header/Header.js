@@ -9,8 +9,8 @@ class Header extends Component {
     return (
       <div className="header">
           <img src={logo} className="App-logo" alt="logo" />
-          <img src={perfil} className="Perfil" alt="Perfil"/>
           <img src={sair} className="Sair" alt="Sair"/>
+          <img src={perfil} className="Perfil" alt="Perfil"/>
       </div>
     );
   }
