@@ -34,6 +34,12 @@
     background-color: rgba(255, 255, 255, 0.151);
     margin: 10px;
     border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendario img{
+    width: 80%;
 }
 .addEvento{
     display: flex;
@@ -45,7 +51,7 @@
     font-size: 15pt;  
 }
 
-.modalOFF{
+.modal{
     display: none;
     align-items: center;
     justify-content: center;
@@ -56,16 +62,6 @@
     z-index: 100;
 }
 
-.modalON{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.329);
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-}
 .card{
     display: flex;
     align-items: center;
@@ -74,9 +70,58 @@
     color: #f9f9f9;
     background-color: rgb(0, 0, 0);
     width: 60vw;
-    height: 60vh;
+    height: 70vh;
     font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    border: solid 3px #13df6f;
 }
+.card div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#amigos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card p{
+    color: #13df6f;
+}
+.card img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 20px;
+}
+.card img:hover{
+    width: 60px;
+    height: 60px;
+    border: solid 3px #13df6f;
+}
+
+.card button{
+    background-color: #13df6f;
+    color: black;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: #13df6f;
+    color: black;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
 
 .add{
     align-self: flex-start;
@@ -119,7 +164,7 @@
     padding: 18px 10px;
 }
 .controladorON button{
-    background-color: #ff0086;
+    background-color: #bb4081;
     color: #f9f9f9;
     font-weight: bolder;
 }

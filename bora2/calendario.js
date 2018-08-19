@@ -1,10 +1,26 @@
 let botao = document.querySelector(".add");
-let modal = document.querySelectorAll(".modal");
-let chamar = document.querySelectorAll(".chamar");
-
-
+let modal = document.querySelector(".modal");
+let chamar = document.querySelector(".chamar");
+let amigos = document.querySelectorAll(".amigos");
+let botoesCalendario = document.querySelectorAll(".botao")
+let calendario = document.querySelector(".calendario");
 
 botao.addEventListener('click', function(){
     modal.style.display = 'flex';
-    modal.classList.toggle(".modalON")
 });
+
+chamar.addEventListener('click', function(){
+    modal.style.display = 'none';
+});
+
+for (botaoCalendario of botoesCalendario){
+    botaoCalendario.onclick = trocaCalendario;
+}
+
+function trocaCalendario(){
+    calendario.style.backgroundColor = 'red';
+    this.style.backgroundColor = '#ff0086';
+}
+
+
+

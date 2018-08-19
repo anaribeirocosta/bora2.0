@@ -8,10 +8,71 @@
     <link rel="stylesheet" href="calendario.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script defer src="calendario.js"></script>
+    <link href='css/fullcalendar.css' rel='stylesheet' />
+    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='js/moment.min.js'></script>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+    <script src='locale/pt-br.js'></script>
+    <script>
+        
+        $(document).ready(function() {
+            
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay,listWeek'
+                },
+                defaultDate: '2018-08-23',
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                {
+                    title: 'Demoday',
+                    start: '2018-08-23',
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2018-08-24',
+                },
+                {
+                    id: 999,
+                    title: 'Reunião',
+                    start: '2018-08-27T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Reunião',
+                    start: '2018-08-29T16:00:00'
+                },
+                {
+                    title: 'Viagem',
+                    start: '2018-08-30',
+                    end: '2018-08-31'
+                },
+                {
+                    title: 'Almoço com Amigos',
+                    start: '2018-08-28T12:00:00'
+                },
+                {
+                    title: 'Festa de Aniversário',
+                    start: '2018-09-02T07:00:00'
+                },
+                ]
+            });
+            
+        });
+        $('#calendar').fullCalendar({
+            height: 100
+        });
+        
+    </script>
 </head>
 
 <body>
-    <section class="modalOFF">
+    <section class="modal" id="modal">
         <div class="card">
             <div>
                 <p>O que faremos?</p>
@@ -21,23 +82,30 @@
                 <p>Vai ser muito caro?</p>
                 <input type="number"placeholder="Quanto morre">
                 <p>Seus amigos</p>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            </div>
+            <div id="amigos">
+                <img class="amigos" src="./imagens/amigo1.jpg" alt="">
+                <img class="amigos" src="./imagens/amigo2.jpg" alt="">
+                <img class="amigos" src="./imagens/amigo3.jpg" alt="">
+                <img class="amigos" src="./imagens/amigo4.jpg" alt="">
+                <img class="amigos" src="./imagens/amigo5.jpg" alt="">
             </div>
             <Button class="chamar">Chamar a Galera!</Button>
         </div>
-            
         
-    </section>
-    <nav class="header">
-        <img src='./imagens/logo.svg' class="App-logo" alt="logo" />
-        <img src='./imagens/sair.svg' class="Sair" alt="Sair"/>
-        <img src='./imagens/perfil.svg' class="Perfil" alt="Perfil"/>
-    </nav>
-    <section class="body">
-        <div class="calendario">
-            
+    </div>
+    
+    
+</section>
+<nav class="header">
+    <img src='./imagens/logo.svg' class="App-logo" alt="logo" />
+    <img src='./imagens/sair.svg' class="Sair" alt="Sair"/>
+    <img src='./imagens/perfil.svg' class="Perfil" alt="Perfil"/>
+</nav>
+<section class="body">
+    <div class="calendario">
+        <!-- <div id='calendar'>     -->
+            <!-- <img id="imagem" src="./imagens/amigo5.jpg" alt=""> -->
         </div>    
         <div class="eventos">
             <div class="addEvento">
