@@ -8,67 +8,6 @@
     <link rel="stylesheet" href="calendario.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script defer src="calendario.js"></script>
-    <link href='css/fullcalendar.css' rel='stylesheet' />
-    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-    <script src='js/moment.min.js'></script>
-    <script src='js/jquery.min.js'></script>
-    <script src='js/fullcalendar.min.js'></script>
-    <script src='locale/pt-br.js'></script>
-    <script>
-        
-        $(document).ready(function() {
-            
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay,listWeek'
-                },
-                defaultDate: '2018-08-23',
-                navLinks: true, // can click day/week names to navigate views
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                events: [
-                {
-                    title: 'Demoday',
-                    start: '2018-08-23',
-                },
-                {
-                    title: 'Happy Hour',
-                    start: '2018-08-24',
-                },
-                {
-                    id: 999,
-                    title: 'Reunião',
-                    start: '2018-08-27T16:00:00'
-                },
-                {
-                    id: 999,
-                    title: 'Reunião',
-                    start: '2018-08-29T16:00:00'
-                },
-                {
-                    title: 'Viagem',
-                    start: '2018-08-30',
-                    end: '2018-08-31'
-                },
-                {
-                    title: 'Almoço com Amigos',
-                    start: '2018-08-28T12:00:00'
-                },
-                {
-                    title: 'Festa de Aniversário',
-                    start: '2018-09-02T07:00:00'
-                },
-                ]
-            });
-            
-        });
-        $('#calendar').fullCalendar({
-            height: 100
-        });
-        
-    </script>
 </head>
 
 <body>
@@ -103,42 +42,172 @@
     <img src='./imagens/perfil.svg' class="Perfil" alt="Perfil"/>
 </nav>
 <section class="body">
-    <div class="calendario">
-        <!-- <div id='calendar'>     -->
-            <!-- <img id="imagem" src="./imagens/amigo5.jpg" alt=""> -->
-        </div>    
-        <div class="eventos">
-            <div class="addEvento">
-                <button class="add" id="add"> + </button>
-                <h1> Adicionar Evento </h1>
+    <section class="calendario">
+        <div class="cabecalho">
+            <p>Agosto</p>
+            <div class="dias">
+                <p>Seg</p>
+                <p>Ter</p>
+                <p>Qua</p>
+                <p>Qui</p>
+                <p>Sex</p>
+                <p>Sab</p>
+                <p>Dom</p>
             </div>
-            <div class= "controladores">        
-                <div class="controlador">
-                    <p>
-                        Você está na pista
-                    </p>
-                    <button class="botao">
-                        ativar
-                    </button>
-                </div>
-                <div class="controlador">
-                    <p>
-                        Seus amigos estão na Pista
-                    </p>
-                    <button class="botao">
-                        ativar
-                    </button>
-                </div>
-                <div class="controlador">
-                    <p>
-                        Eventos
-                    </p>
-                    <button class="botao">
-                        ativar
-                    </button>
-                </div>
-            </div> 
-        </section>    
-        
-    </body>
-    </html>
+        </div>
+    </div class="tabuleiro">   
+    <div class="semana">
+        <div class="dia" >
+            <p></p>
+        </div>
+        <div class="dia">
+            <p></p>
+        </div>
+        <div class="dia">
+            <p>1</p>
+        </div>
+        <div class="dia">
+            <p>2</p>
+        </div>
+        <div class="dia">
+            <p>3</p>
+        </div>
+        <div class="dia" id="evento">
+            <p>4</p>
+        </div>
+        <div class="dia">
+            <p>5</p>
+        </div>  
+    </div>
+    <div class="semana">
+        <div class="dia" id="um">
+            <p>6</p>
+        </div>
+        <div class="dia">
+            <p>7</p>
+        </div>
+        <div class="dia">
+            <p>8</p>
+        </div>
+        <div class="dia">
+            <p>9</p>
+        </div>
+        <div class="dia">
+            <p>10</p>
+        </div>
+        <div class="dia">
+            <p>11</p>
+        </div>
+        <div class="dia">
+            <p>12</p>
+        </div>  
+    </div>
+    <div class="semana">
+        <div class="dia">
+            <p>13</p>
+        </div>
+        <div class="dia">
+            <p>14</p>
+        </div>
+        <div class="dia">
+            <p>15</p>
+        </div>
+        <div class="dia">
+            <p>16</p>
+        </div>
+        <div class="dia">
+            <p>17</p>
+        </div>
+        <div class="dia">
+            <p>18</p>
+        </div>
+        <div class="dia">
+            <p>19</p>
+        </div>  
+    </div>
+    <div class="semana">
+        <div class="dia">
+            <p>20</p>
+        </div>
+        <div class="dia">
+            <p>21</p>
+        </div>
+        <div class="dia">
+            <p>22</p>
+        </div>
+        <div class="dia">
+            <p>23</p>
+        </div>
+        <div class="dia">
+            <p>24</p>
+        </div>
+        <div class="dia">
+            <p>25</p>
+        </div>
+        <div class="dia">
+            <p>26</p>
+        </div>  
+    </div>
+    <div class="semana">
+            <div class="dia">
+                <p>27</p>
+            </div>
+            <div class="dia">
+                <p>28</p>
+            </div>
+            <div class="dia">
+                <p>29</p>
+            </div>
+            <div class="dia">
+                <p>30</p>
+            </div>
+            <div class="dia">
+                <p>31</p>
+            </div>
+            <div class="dia">
+                <p></p>
+            </div>
+            <div class="dia">
+                <p></p>
+            </div>  
+        </div>
+ 
+    </div>
+    
+</section>
+
+<div class="eventos">
+    <div class="addEvento">
+        <button class="add" id="add"> + </button>
+        <h1> Adicionar Evento </h1>
+    </div>
+    <div class= "controladores">        
+        <div class="controlador">
+            <p>
+                Você está na pista
+            </p>
+            <button class="botao">
+                ativar
+            </button>
+        </div>
+        <div class="controlador">
+            <p>
+                Seus amigos estão na Pista
+            </p>
+            <button class="botao">
+                ativar
+            </button>
+        </div>
+        <div class="controlador">
+            <p>
+                Eventos
+            </p>
+            <button class="botao">
+                ativar
+            </button>
+        </div>
+    </div> 
+</section>    
+
+</body>
+</html>

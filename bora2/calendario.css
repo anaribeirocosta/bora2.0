@@ -30,17 +30,71 @@
 }
 .calendario{
     width: 350px;
-    height: 250px;
+    height: 500px;
     background-color: rgba(255, 255, 255, 0.151);
     margin: 10px;
     border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.calendario img{
+
+.cabecalho{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cabecalho p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+    color: #f9f9f9;
+    margin: 7px 0;
+}
+.dias{
+    display: flex;
+  /* justify-content: flex-start;
+    align-items: flex-start; */
+}
+.tabuleiro{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dias p{
+    width: 50px;
+    height: 20px;
+    color: #f9f9f9;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+
+}
+.semana{
+    display: flex;
+ }
+.dia{
+    width: 50px;
+    height: 50px;
+    background-color: #f9f9f936;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #f9f9f9;
+}
+
+.dia:hover{
+    width: 50px;
+    height: 50px;
+    background-color: #ff010136;
+}
+
+
+/* .calendario img{
     width: 80%;
-}
+} */
 .addEvento{
     display: flex;
     justify-content: space-evenly;
